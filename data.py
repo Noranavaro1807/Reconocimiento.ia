@@ -3,7 +3,7 @@ cap=cv2.VideoCapture(0)
 net= cv2.dnn.readNetFromCaffe("opencv_face_detector.prototxt", "res10_300x300_ssd_iter_140000.caffemodel")
 
 #parametros del modulo 
-#tamaño de la pantalla
+#tamaño de la pantalla para mostrar
 anchonet = 300
 altonet = 300
 
@@ -14,7 +14,7 @@ while True:
     #leemos los frames 
     ret, frame = cap.read()
     
-    #si hay error
+    #si hay error 
     if not ret:
         break
     
@@ -50,7 +50,7 @@ while True:
             label = "Confianza de deteccion: $.4f" % conf_detect
             #tamaño de fondo del label
             label_size, base_line = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
-            #colocamos fondo al texto
+            #aqui colocamos fondo al texto
             cv2.rectangle(frame, (xmin, ymin - label_size[1]), (xmin + label_size[0], ymin + base_line),
                     (0,0,0), cv2.FILLED)
             #colocamos el texto 
