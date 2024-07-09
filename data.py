@@ -3,7 +3,7 @@ cap=cv2.VideoCapture(0)
 net= cv2.dnn.readNetFromCaffe("opencv_face_detector.prototxt", "res10_300x300_ssd_iter_140000.caffemodel")
 
 #parametros del modulo 
-#tamaño
+#tamaño de la pantalla
 anchonet = 300
 altonet = 300
 
