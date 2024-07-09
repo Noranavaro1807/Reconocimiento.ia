@@ -1,6 +1,6 @@
 import cv2
 import mediapipe as mp 
-
+#no se añadio el git ignore
 mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 face_detection = mp_face_detection.FaceDetection()
